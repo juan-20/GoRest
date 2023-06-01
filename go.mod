@@ -21,6 +21,7 @@ require (
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/gohugoio/hugo v0.112.5 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/google/uuid v1.3.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
