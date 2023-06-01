@@ -1,0 +1,11 @@
+root = "."
+tmp_dir = "tmp"
+build_dir = "tmp/bin"
+
+[build]
+  exclude_dir = ["tmp"]
+
+[[watcher]]
+  path = "."
+  include_ext = ["go"]
+  exclude_dir = ["tmp", "vendor"]
