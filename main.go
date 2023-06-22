@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -85,36 +84,6 @@ func main() {
 		}
 
 		c.JSON(http.StatusOK, gin.H{"message": results})
-	})
-
-	// Define your routes
-	r.GET("/api/hello", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "Hello, World!",
-		})
-	})
-
-	r.GET("/api/multiply/:value", func(c *gin.Context) {
-		// Retrieve the value from the URL parameter
-		valueParam := c.Param("value")
-		fmt.Println(valueParam)
-		// Convert the value to an integer
-		value, err := strconv.Atoi(valueParam)
-		// Validade header
-		if err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{
-				"error": "Invalid value",
-			})
-			return
-		}
-
-		// Multiply the value by 10
-		result := value * 10
-
-		// Return the result as a JSON response
-		c.JSON(http.StatusOK, gin.H{
-			"result": result,
-		})
 	})
 
 	// Run the server
